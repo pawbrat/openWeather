@@ -36,8 +36,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   Make a nice looking 5-day weather forecast page using [OpenWeatherMap forecast API](https://openweathermap.org/forecast5) and Vue. With tests. Hosted somewhere (probably github pages). 
 
 ## MVP plan
-  - ~~make repo ~~
-  - make basic vue app (UI placeholders and API method mocks)
+  - ~~make repo~~
+  - ~~make basic vue app (UI placeholders and API method mocks)~~
   - talk to openWeatherMap (pass city name?)
   - consume API response (interpret and display weather forecast)
   - build/run/test instructions
@@ -50,6 +50,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   - optimize bundle
   
 ## devblog
+
+###2
+created basic vue app with basic component structure 
 
 ###1
 created new git repo. had to update local git - was so old it couldnt clone repo ('alert protocol version' error).
