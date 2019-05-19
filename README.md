@@ -48,8 +48,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   - get weather forecast by coordinates
   - make use of local storage/cookies (history, favourites etc)
   - optimize bundle
+  - add charts (temperature, rain etc)
   
 ## devblog
+
+###3
+connected to openweather, added some basic data transformations and grouping; moved logic/utility files to core folder as they're obviously not components; weather forecast is now displayed (just temperatures and basic description for now); cleaned up a bit (bye helloworld)
 
 ###2
 created basic vue app with basic component structure 
