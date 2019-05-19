@@ -39,7 +39,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   - ~~make repo~~
   - ~~make basic vue app (UI placeholders and API method mocks)~~
   - ~~talk to openWeatherMap (pass city name?)~~
-  - consume API response (interpret and display weather forecast)
+  - ~~consume API response (interpret and display weather forecast)~~
   - build/run/test instructions
   - hosting
 ## optional features
