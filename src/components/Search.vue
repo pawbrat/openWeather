@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input v-model="city"/>
+    <input v-model="city" v-on:keyup.enter="callAPI(city)"/>
     <button @click="callAPI(city)">search</button>
     <p>{{errorMessage}}</p>
   </div>
@@ -21,13 +21,13 @@ export default {
   },
   methods: {
     callAPI: function(city){
-    api.get(`?q=${city}`).then(response => {
-          this.errorMessage = '';
-          console.log(response);
-        })
-        .catch(error => {
-          this.errorMessage = error.response.data.message;
-        });
+      api.get(`?q=${city}`).then(response => {
+            this.errorMessage = '';
+            this.$emit('myEvent', response.data)
+          })
+          .catch(error => {
+            this.errorMessage = error.response.data.message;
+          });
     }
   }
 }

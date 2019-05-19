@@ -2,7 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Search/>
+    <Search @myEvent="consumeData"/>
     <ul>
       <li v-for="day in days" v-bind:key="day.id" v-bind:msg=day>
          <Day :msg="day"></Day>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import groupChunks from './components/weatherData';
 import Day from './components/Day.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import Search from './components/Search.vue';
@@ -25,14 +26,22 @@ export default {
   },
   data: function() {
     return {
-      days: [
-        {id: 1, name: 1},
-        {id: 2, name: 2},
-        {id: 3, name: 3},
-        {id: 4, name: 4},
-        {id: 5, name: 5}
-      ]
+      days: []
     };
+  },
+  methods: {
+    consumeData(data) {
+      if(data.list) {
+        console.log('upsik');
+        groupChunks(data.list);
+        //data.list.forEach(item => {
+        //  console.log(item.dt_txt);
+        //})
+        //this.days = data.list.slice(0, 5);
+        //console.log(this.days);
+      }
+    }, 
+
   }
 }
 </script>
