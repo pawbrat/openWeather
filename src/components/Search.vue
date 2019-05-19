@@ -2,10 +2,12 @@
   <div>
     <input v-model="city"/>
     <button @click="callAPI(city)">search</button>
+    <p>{{errorMessage}}</p>
   </div>
 </template>
 
 <script>
+import api from './api';
 export default {
   name: 'Search',
   props: {
@@ -13,12 +15,19 @@ export default {
   },
   data() {
     return {
-      city: ''
+      city: '',
+      errorMessage: ''
     }
   },
   methods: {
-    callAPI: (city) => {
-      console.log('will fetch weather forecast for ' + city);
+    callAPI: function(city){
+    api.get(`?q=${city}`).then(response => {
+          this.errorMessage = '';
+          console.log(response);
+        })
+        .catch(error => {
+          this.errorMessage = error.response.data.message;
+        });
     }
   }
 }
