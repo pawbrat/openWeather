@@ -1,5 +1,7 @@
 # weatherapp
 
+hosted temporary [here](http://weatherapp.cba.pl/)
+
 ## Project setup
 ```
 npm install
@@ -15,7 +17,7 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
+### Run your tests (not yet there, though averages and data processing could use some...)
 ```
 npm run test
 ```
@@ -24,10 +26,6 @@ npm run test
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 
 # openWeather
 
@@ -41,7 +39,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   - ~~talk to openWeatherMap (pass city name?)~~
   - ~~consume API response (interpret and display weather forecast)~~
   - build/run/test instructions
-  - hosting
+  - ~~hosting~~
 ## optional features
   - decent UI
   - get weather forecast for user location
@@ -51,6 +49,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   - add charts (temperature, rain etc)
   
 ## devblog
+
+###4
+nope, githubpages is not the hosting i was looking for. used CBA for now. sorry.
 
 ###3
 connected to openweather, added some basic data transformations and grouping; moved logic/utility files to core folder as they're obviously not components; weather forecast is now displayed (just temperatures and basic description for now); cleaned up a bit (bye helloworld)
