@@ -19,7 +19,7 @@ npm run build
 
 ### Run your tests (not yet there, though averages and data processing could use some...)
 ```
-npm run test
+npm run test:unit
 ```
 
 ### Lints and fixes files
@@ -49,6 +49,11 @@ npm run lint
   - add charts (temperature, rain etc)
   
 ## devblog
+
+###5
+managing tests in vue turned out to be not-as-easy as other topics...
+took me a while to run tests against *.vue files - added mocha+chai+webpack.
+still need to work on testing regular *js files thugh
 
 ###4
 nope, githubpages is not the hosting i was looking for. used CBA for now. sorry.
